@@ -74,12 +74,14 @@ def main():
         # Your Code May Start Here
         # ------------
 
+        if CV_RUNNING:
+            i = 0           # Whatever
 
         # ------------
         # Remember to publish what you want to publish.
         # ------------
 
-        cv_roll_pub.publish(roll)
+            cv_roll_pub.publish(roll)
         
         # Make sure your node runs at the proper frequency
         rate.sleep()
