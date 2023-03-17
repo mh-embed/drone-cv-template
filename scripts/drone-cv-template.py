@@ -15,15 +15,15 @@ self.pitch = 0.0
 self.yaw = 0.0
 
 # Function to Initialize the node
-def init_cv(self):
+def init_cv():
     return
 
 # Function to restart CV
-def restart_cv(self):
+def restart_cv():
     return
 
 # Function to pause CV
-def pause_cv(self):
+def pause_cv():
     return
 
 
