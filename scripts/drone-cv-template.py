@@ -27,6 +27,10 @@ def pause_cv(self):
     return
 
 
+# DO NOT CHANGE THIS BIT
+# The Main ROS Controller Needs to be able to Start and Pause 
+# your specific ROS instance. 
+
 # Selector Bit Pauses or Restarts Your CV Workflow
 def selector_bit_receiver(data):
     if CV_RUNNING != data:
@@ -66,12 +70,18 @@ def main():
     
     while not rospy.is_shutdown():
 
+        # ------------
         # Your Code May Start Here
+        # ------------
 
 
-
+        # ------------
         # Remember to publish what you want to publish.
+        # ------------
+
         cv_roll_pub.publish(roll)
+        
+        # Make sure your node runs at the proper frequency
         rate.sleep()
 
 
