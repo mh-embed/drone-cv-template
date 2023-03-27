@@ -10,9 +10,9 @@ CV_RATE = 30
 
 
 # Placeholders
-self.roll = 0.0
-self.pitch = 0.0
-self.yaw = 0.0
+roll = 0.0
+pitch = 0.0
+yaw = 0.0
 
 # Function to Initialize the node
 def init_cv():
