@@ -14,6 +14,7 @@ roll = 0.0
 pitch = 0.0
 yaw = 0.0
 
+
 # Function to Initialize the node
 def init_cv():
     return
@@ -50,23 +51,17 @@ def main():
 
     # Setup Publishing
     ## TBD, Placeholder Publishers and Subscribers
-    cv_roll_pub = rospy.Publisher('cv-roll-' + CV_NODE_UID, Float32, queue_size=10)
-    cv_pitch_pub = rospy.Publisher('cv-pitch-' + CV_NODE_UID, Float32, queue_size=10)
-    cv_yaw_pub = rospy.Publisher('cv-yaw-' + CV_NODE_UID, Float32, queue_size=10)
+    cv_roll_pub = rospy.Publisher('cv_roll_' + CV_NODE_UID, Float32, queue_size=10)
+    cv_pitch_pub = rospy.Publisher('cv_pitch_' + CV_NODE_UID, Float32, queue_size=10)
+    cv_yaw_pub = rospy.Publisher('cv_yaw_' + CV_NODE_UID, Float32, queue_size=10)
 
     # Setup Subscribing
     # Setup Selector Bit 
-    rospy.Subscriber('cv-selector-'+CV_NODE_UID, Bool, selector_bit_receiver)
+    rospy.Subscriber('cv_selector/'+CV_NODE_UID, Bool, selector_bit_receiver)
 
-    # Setup Spin Rate
-    rate = rospy.Rate(CV_RATE)       # All CV Programs run at 30hz
-
-    # Initialize CV
+    # Initialize Your CV Program
     init_cv()
-
-
-
-
+    rate = rospy.Rate(CV_RATE)       # All CV Programs run at 30hz
     
     while not rospy.is_shutdown():
 
@@ -75,7 +70,8 @@ def main():
         # ------------
 
         if CV_RUNNING:
-            i = 0           # Whatever
+            i = 0           # Dummy
+
 
         # ------------
         # Remember to publish what you want to publish.
