@@ -6,9 +6,8 @@ import cv2
 CV_RATE = 30
 
 class CV_Node:
-
     # GLOBAL CONSANTS
-    CV_NODE_UID = "TEMPLATE"            # Change This to Whatever You are Provided
+    CV_NODE_UID = "mhcv_template"            # Change This to the UID You are Provided
     CV_RUNNING = False
     
     def __init__(self):

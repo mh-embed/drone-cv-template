@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+  <rosparam param="/cv_selector/mhcv_template">False</rosparam>
+  <node name="mhcv_template_exec" pkg="mhcv_template" type="cv.py" launch-prefix="$(find mhcv_template)/scripts/cv.py" output="screen" required="true"/>
+</launch>

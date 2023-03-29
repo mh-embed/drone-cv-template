@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>mhcv-template</name>
+  <name>mhcv_template</name>
   <version>0.0.0</version>
   <description>The Michigan Hackers Embedded Systems Group Drone CV Template package</description>
 
